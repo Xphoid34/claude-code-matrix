@@ -7,3 +7,5 @@ node_modules/
 .vercel
 .mcp.json
 *.docx
+.DS_Store
+Craftora_ai/snapsell/
