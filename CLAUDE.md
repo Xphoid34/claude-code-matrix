@@ -96,6 +96,14 @@
 - remotion-best-practices
 - find-skills
 
+### Recently Installed Tools
+- **last30days skill**: Researches topics across Reddit, X (Twitter), and web from the last 30 days. Generates copy-paste-ready prompts and recommendations. Config at ~/.config/last30days/.env (OPENAI_API_KEY + XAI_API_KEY)
+- **Compound Engineering plugin**: Provides `/workflows:plan` command that transforms research output into structured PRDs (Product Requirements Documents)
+
+### Recommended Workflow
+1. `/last30days` → research a topic
+2. `/workflows:plan` → transform research into actionable PRD
+
 ---
 
 ## Bash Commands
