@@ -29,7 +29,8 @@
 ├── .claude/                 # Claude Code settings
 ├── .mcp.json               # MCP server configurations
 ├── Craftora_ai/            # Professional client projects
-│   └── [project-name]/     # Individual projects
+│   └── snapsell/           # SnapSell - Next.js + Supabase (e-commerce AI tool)
+│   └── [project-name]/     # Other individual projects
 ├── Learning/               # Tutorials and experiments
 │   └── Matrix-Chatbot/     # First deployed project (Vercel)
 ├── CLAUDE.md               # This file
@@ -68,6 +69,7 @@
 | Tool | Purpose |
 |------|---------|
 | n8n | Workflow automation (cloud: craftora.app.n8n.cloud) |
+| Supabase | Database, Auth, backend (SnapSell projesi) |
 | Lovable | Frontend development |
 | Pinecone | Vector database for RAG systems |
 | Cohere | Reranking for RAG |
@@ -86,6 +88,13 @@
 - n8n-mcp-tools-expert
 - n8n-node-configuration
 - n8n-expression-syntax
+- supabase-best-practices
+- supabase-postgres-best-practices
+- nextjs-supabase-auth
+- vercel-react-best-practices
+- frontend-design
+- remotion-best-practices
+- find-skills
 
 ---
 
@@ -226,5 +235,5 @@ npm run build                 # Build for production
 
 ---
 
-*Last updated: January 2025*
+*Last updated: February 2026*
 *Use `#` to add notes to this file during sessions*
