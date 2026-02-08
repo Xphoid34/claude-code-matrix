@@ -20,6 +20,13 @@
 - **Honesty:** Say "I don't know" rather than guess. State assumptions clearly.
 - **Feedback:** Open to criticism if approach is wrong
 
+### Honesty Rules (Critical)
+- No hallucination. Say "I don't know" rather than fabricate.
+- No flattery or empty praise. If something works, explain why. If it's bad, say so.
+- Correct mistakes immediately. Don't soften to be polite.
+- Suggest efficient solutions, warn about hidden costs. Never sacrifice quality.
+- Never present uncertain info as fact. Label assumptions explicitly.
+
 ---
 
 ## Project Structure
@@ -77,6 +84,9 @@
 | GitHub | Version control |
 | ElevenLabs | Voice synthesis (for voice agents) |
 
+### Default Model
+Claude Opus 4.6 (1M token context beta, agent teams, adaptive thinking)
+
 ### MCP Servers Available
 - **n8n-mcp**: Connected to n8n Cloud instance (543 nodes available)
 
@@ -96,13 +106,13 @@
 - remotion-best-practices
 - find-skills
 
-### Recently Installed Tools
-- **last30days skill**: Researches topics across Reddit, X (Twitter), and web from the last 30 days. Generates copy-paste-ready prompts and recommendations. Config at ~/.config/last30days/.env (OPENAI_API_KEY + XAI_API_KEY)
-- **Compound Engineering plugin**: Provides `/workflows:plan` command that transforms research output into structured PRDs (Product Requirements Documents)
+### Research → Planning → Execution Chain
+1. `/last30days [topic]` → research across Reddit, X, web (last 30 days)
+2. `/workflows:plan` → transform research into PRD (Compound Engineering plugin)
+3. `/gsd:plan-phase N` → create phase plan from PRD
+4. `/gsd:execute-phase N` → implement
 
-### Recommended Workflow
-1. `/last30days` → research a topic
-2. `/workflows:plan` → transform research into actionable PRD
+Config: last30days requires ~/.config/last30days/.env (OPENAI_API_KEY + XAI_API_KEY)
 
 ---
 
@@ -192,6 +202,15 @@ npm run build                 # Build for production
 
 ---
 
+### Active Project: SnapSell
+- Photo upload → AI analysis (OpenAI Vision) → auto product listing
+- Stack: Next.js 16 + n8n workflow + Supabase + OpenAI Vision
+- HITL (Human-in-the-Loop) for missing product info
+- Status: Phase 5 completed, preparing Phase 6
+- Uses GSD system for phase-based development
+
+---
+
 ## Context for Common Tasks
 
 ### Creating n8n Workflows
@@ -213,12 +232,6 @@ npm run build                 # Build for production
 - Chunk size: Start with 512 tokens
 - Always include metadata for filtering
 - Test retrieval quality before building UI
-
-### Voice Agents
-- Turkish language is primary requirement
-- ElevenLabs for voice synthesis
-- n8n for conversation logic
-- SIP trunk needed for phone integration (challenge: Turkish numbers)
 
 ---
 
@@ -243,5 +256,5 @@ npm run build                 # Build for production
 
 ---
 
-*Last updated: February 2026*
+*Last updated: February 8, 2026*
 *Use `#` to add notes to this file during sessions*
